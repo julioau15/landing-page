@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0C0E12;
+  color: #CFCFCF;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  max-width: 1000px;
+  max-height: 70px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo h2 {
+  font-family: 'Jomhuria', cursive;
+  font-size: 64px;
+  color: #FCFEFF;
+  height: 50px;
+}
+
+.logo span {
+  color: #C2F22E;
+  font-size: 40px;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #0f111691;
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  z-index: -2;
+}
+
+.button-container a {
+  color: #A3ACB4;
+  text-decoration: none;
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  margin-top: 10px;
+
+}
+
+
+.contact-us {
+  background-color: #C2F22E;
+  color: #1B2B32;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-us:hover {
+  background-color: #e5ff5e;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+.text-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.speed-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f111691;
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  width: fit-content;
+  height: 250px;
+}
+
+.speed-container::after{
+    content: '';
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 8px solid  #0A2547;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:27vh;
+}
+
+
+.speed {
+  display: flex;
+  flex-direction: column;
+}
+
+.speed span {
+  font-weight: 700;
+  font-size: 24px;
+  color: #EFEFEF;
+  z-index: 2;
+}
+
+.speed h3 {
+  display: block;
+  font-size: 13px;
+  color: #A3ACB4;
+  z-index: 2;
+}
+
+.power{
+    margin-bottom: 0px;
+}
+
+.uninterrupted {
+    margin-top: 0px;
+  font-weight: 700;
+  color: #EFEFEF;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  font-family: 'Jomhuria', cursive;
+  font-size: 96px;
+  color: #D5DFE7;
+  line-height: 0.5;
+  margin-top: 70px;
+  z-index: -2;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+
+.text p {
+  margin-top: 5rem;
+  max-width: 250px;
+  color: #CFCFCF;
+  line-height: 1.5;
+}
+
+.get-start{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C2F22E;
+  color: #1B2B32;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  width: 110px;
+  height: 40px;
+}
+
+.car-image img {
+  width: 100%;
+  max-width: 800px;
+  filter: drop-shadow(20px 20px 20px #0A2547);
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -60%);
+  z-index: -1;
+}
+
+.secondary-buttons{
+    display: flex;
+    background-color: #181b23de;
+    justify-content: space-around;
+    width: 500px;
+    align-items: center;
+    padding: 1rem 0;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius: 10px;
+}
+
+.secondary-buttons h3{
+    font-size: 1rem;
+    gap: 5px;
+}
+
+.secondary-buttons img{
+    width: auto;
+    height: 13px;
+}
+
+footer {
+  background:  #0f111691;
+  padding: 2rem 0;
+  margin-top:7rem;
+  width: 80vw;
+  border-radius: 10px;
+  position: absolute;
+  left:50%;
+  transform: translate(-50%);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.footer img {
+  width: 35px;
+  height: auto;
+  filter: brightness(0.9);
+  transition: transform 0.3s;
+}
+
+.footer img:hover {
+  transform: scale(1.1);
+}
