@@ -1,3 +1,12 @@
+:root{
+  --text-color: #FCFEFF;
+  --secondary-text-color:#A3ACB4;
+  --primary-color:#0C0E12;
+  --secondary-color:#1a1d2591;
+  --button-color:#C2F22E;
+
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +14,11 @@
 }
 
 body {
-  background-color: #0C0E12;
-  color: #CFCFCF;
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 header {
@@ -25,12 +35,12 @@ header {
 .logo h2 {
   font-family: 'Jomhuria', cursive;
   font-size: 64px;
-  color: #FCFEFF;
+  color: var(--text-color);
   height: 50px;
 }
 
 .logo span {
-  color: #C2F22E;
+  color: var(--button-color);
   font-size: 40px;
 }
 
@@ -39,27 +49,37 @@ header {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  background-color: #0f111691;
-  width: 500px;
-  height: 300px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -5%);
-  z-index: -2;
 }
 
 .button-container a {
-  color: #A3ACB4;
+  color: var(--secondary-text-color);
   text-decoration: none;
   font-size: 17px;
   letter-spacing: 0.08em;
   margin-top: 10px;
+}
+
+.button-container a:hover{
+  transform: scale(1.1);
 
 }
 
+main .main-text{
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  z-index: -2;
+  background-color: var(--secondary-color);
+}
+main h1{
+  margin-top: 150px;
+  width: 600px;
+}
 
 .contact-us {
-  background-color: #C2F22E;
+  background-color: var(--button-color);
   color: #1B2B32;
   padding: 0.6rem 1.5rem;
   border-radius: 10px;
@@ -69,7 +89,8 @@ header {
 }
 
 .contact-us:hover {
-  background-color: #e5ff5e;
+  background-color: var(--button-color);
+  transform: scale(1.1);
 }
 
 main {
@@ -82,6 +103,7 @@ main {
 .text-container{
     display: flex;
     justify-content: space-between;
+    margin-top: 120px;
 }
 
 .speed-container{
@@ -89,7 +111,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: #0f111691;
+  background: var(--secondary-color);
   border-radius: 20px;
   padding: 1.5rem;
   text-align: center;
@@ -114,14 +136,14 @@ main {
 .speed span {
   font-weight: 700;
   font-size: 24px;
-  color: #EFEFEF;
+  color: var(--text-color);
   z-index: 2;
 }
 
 .speed h3 {
   display: block;
   font-size: 13px;
-  color: #A3ACB4;
+  color: var(--text-color);
   z-index: 2;
 }
 
@@ -132,14 +154,14 @@ main {
 .uninterrupted {
     margin-top: 0px;
   font-weight: 700;
-  color: #EFEFEF;
+  color: var(--text-color);
   letter-spacing: 0.08em;
 }
 
 h1 {
   font-family: 'Jomhuria', cursive;
   font-size: 96px;
-  color: #D5DFE7;
+  color: var(--text-color);
   line-height: 0.5;
   margin-top: 70px;
   z-index: -2;
@@ -152,7 +174,7 @@ h1 {
 .text p {
   margin-top: 5rem;
   max-width: 250px;
-  color: #CFCFCF;
+  color: var(--text-color);
   line-height: 1.5;
 }
 
@@ -160,13 +182,17 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #C2F22E;
+  background-color: var(--button-color);
   color: #1B2B32;
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
   width: 110px;
   height: 40px;
+}
+
+.get-start:hover{
+  transform: scale(1.1);
 }
 
 .car-image img {
@@ -182,7 +208,7 @@ h1 {
 
 .secondary-buttons{
     display: flex;
-    background-color: #181b23e7;
+    background-color: var(--secondary-color);
     justify-content: space-around;
     width: fit-content;
     align-items: center;
@@ -211,10 +237,10 @@ h1 {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top:50%;
+  bottom:50%;
   left: 50%;
-  transform: translate(-50%, 200%);
-  background-color:  #0b39ad91;
+  transform: translate(-50%, 280%);
+  background-color:  var(--secondary-color);
   padding: 30px;
   margin-top:7rem;
   width: fit-content;
