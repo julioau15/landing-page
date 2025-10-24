@@ -141,7 +141,7 @@ main {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 8px solid  #0A2547;
+  border: 8px solid var(--button-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,15 +250,17 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color:  var(--secondary-color);
+  padding: 50px 30px;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+footer{
   position: absolute;
   bottom:50%;
   left: 50%;
   transform: translate(-50%, 240%);
-  background-color:  var(--secondary-color);
-  padding: 50px 30px;
-  margin-top:7rem;
-  width: fit-content;
-  border-radius: 10px;
 }
 
 .footer img {
@@ -276,7 +278,7 @@ h1 {
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
   .speed-container{
     display: none;
   }
@@ -289,8 +291,13 @@ h1 {
     width: 90%;
     top:50%;
     left:50%;
-    transform: translate(-50%, -58%);
+    transform: translate(-50%, -55%);
 
+  }
+
+  .button-container{
+    margin-right: 160px;
+    margin-top: 13px;
   }
 
   .main-text{
@@ -304,7 +311,12 @@ h1 {
 
   .secondary-buttons h3{
     width: 70px;
+  }
 
+  .secondary-buttons{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 160%);
   }
 
   .a{
@@ -319,6 +331,10 @@ h1 {
 
   .footer img{
     width: 650px;
+  }
+
+  .footer{
+    margin-top: 30px;
   }
 
   .contact-us{
@@ -336,12 +352,126 @@ h1 {
 
   }
 
+  .logo-empresa{
+    width: 30px;
+    height: 15px;
+    background-color: var(--button-color);
+    border-radius: 200px 0px 200px 0px;
+  }
+
 }
 
 @media(max-width: 480px){
-  *{
-      overflow-x: hidden;
- 
 
+.speed-container{
+  display: none;
+}
+
+#contact-us{
+  display: none;
+}
+
+.contact-us{
+  display: none;
+}
+
+.car-image img{
+  width: 100%;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -30%);
+
+}
+
+.button-container{
+  margin-right: 0;
+  margin-top: 17px;
+}
+
+.main-text{
+  max-width: 300px;
+  max-height: 400px;
+  top: 27%;
+}
+
+.main-text h1{
+  height: 100px;
+  width: 350px;
+  margin-top:60px;
+  font-size: 70px;
+}
+
+.text-container{
+  margin: 0;
+  gap: 0;
+}
+
+.text p{
+  margin: 10px 0;
+}
+
+.secondary-buttons h3{
+  width: 50px;
+  font-size: 12px;
+}
+
+.secondary-buttons h3 img{
+  width: 10px;
+  height: 10px;
+}
+
+.get-start{
+  font-size: 12px;
+  width: 80px;
+  height: 30px;
+}
+
+.secondary-buttons{
+  width: fit-content;
+  gap: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 210%);
+  
+}
+
+.a{
+  width: fit-content;
+
+}
+
+.text-container{
+  justify-content: center;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.footer img{
+  width: 330px;
+  padding: 0;
+}
+
+.footer{
+  padding: 15px;
+  margin-top: 60px;
+}
+
+
+header{
+  height: 20vh;
+  max-height: 20vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container a{
+  font-size: 12px;
+}
+
+.logo-empresa{
+  width: 30px;
+  height: 15px;
+  background-color: var(--button-color);
+  border-radius: 200px 0px 200px 0px;
 }
 }
