@@ -4,7 +4,6 @@
   --primary-color:#0C0E12;
   --secondary-color:#1a1d2591;
   --button-color:#C2F22E;
-
 }
 
 * {
@@ -18,20 +17,23 @@ body {
   color: var(--secondary-text-color);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-  height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  max-width: 1000px;
-  max-height: 70px;
-  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
   padding: 2rem 1rem;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  flex-wrap: wrap;
 }
-.logo{
+
+.logo {
   display: flex;
   align-items: center;
 }
@@ -48,12 +50,11 @@ header {
   font-size: 40px;
 }
 
-
 .button-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
-  margin-right: 50px;
 }
 
 .button-container a {
@@ -62,30 +63,11 @@ header {
   font-size: 17px;
   letter-spacing: 0.08em;
   margin-top: 10px;
+  transition: transform 0.3s;
 }
 
-.button-container a:hover{
+.button-container a:hover {
   transform: scale(1.1);
-
-}
-
-main .main-text{
-  width: 550px;
-  height: 500px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  z-index: -2;
-  background-color: var(--secondary-color);
-}
-
-.main-text h1{
-  font-size: 150px;
-}
-
-main h1{
-  margin-top: 150px;
-  width: 600px;
 }
 
 .contact-us {
@@ -95,33 +77,64 @@ main h1{
   border-radius: 10px;
   font-weight: 700;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: transform 0.3s;
 }
 
 .contact-us:hover {
-  background-color: var(--button-color);
   transform: scale(1.1);
 }
 
 main {
+  flex: 1;
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1rem;
-  gap: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
-.text-container{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 140px;
-    width: 100%;
-    
+.main-text {
+  width: 550px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  z-index: -2;
+  background-color: var(--secondary-color);
 }
 
-.speed-container{
+.main-text h1 {
+  font-size: 150px;
+}
+
+h1 {
+  font-family: 'Jomhuria', cursive;
+  width: max-content;
+  font-size: 96px;
+  color: var(--text-color);
+  line-height: 0.5;
+  margin-top: 100px;
+  z-index: -2;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+
+.text-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+  gap: 700px;
+  z-index: 2;
+}
+
+.speed-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,11 +143,9 @@ main {
   border-radius: 20px;
   padding: 1.5rem;
   text-align: center;
-  width: fit-content;
+  width: 220px;
   height: 250px;
-  margin-left: 50px;
 }
-
 
 .speed {
   display: flex;
@@ -143,61 +154,78 @@ main {
   height: 120px;
   border-radius: 50%;
   border: 8px solid var(--button-color);
-  display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .speed span {
   font-weight: 700;
   font-size: 24px;
   color: var(--text-color);
-  z-index: 2;
 }
 
 .speed h3 {
-  display: block;
   font-size: 13px;
   color: var(--text-color);
-  z-index: 2;
-}
-
-.power{
-    margin-bottom: 0px;
 }
 
 .uninterrupted {
-    margin-top: 0px;
   font-weight: 700;
   color: var(--text-color);
   letter-spacing: 0.08em;
 }
 
-h1 {
-  font-family: 'Jomhuria', cursive;
-  font-size: 96px;
-  color: var(--text-color);
-  line-height: 0.5;
-  margin-top: 70px;
-  z-index: -2;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  text-align: center;
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .text p {
-  margin-top: 5rem;
+  margin-top: 0;
   max-width: 250px;
   color: var(--text-color);
   line-height: 1.5;
+  text-align: left;
 }
 
-.get-start{
+
+.car-image img {
+  width: 65%;
+  max-width: 950px;
+  height: auto;
+  filter: drop-shadow(20px 20px 20px #0A2547);
+  position: absolute;
+  top: 2px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.secondary-buttons {
+  display: flex;
+  background-color: var(--secondary-color);
+  justify-content: space-around;
+  align-items: center;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  gap: 76px;
+  margin: 30px auto 0 auto;
+}
+
+.secondary-buttons h3 {
+  font-size: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 5px;
+}
+
+.secondary-buttons img {
+  height: 13px;
+}
+
+.get-start {
   background-color: var(--button-color);
   color: #1B2B32;
   border-radius: 10px;
@@ -205,274 +233,158 @@ h1 {
   text-decoration: none;
   width: 110px;
   height: 40px;
-}
-
-.get-start:hover{
-  transform: scale(1.1);
-}
-
-.car-image img {
-  width: 950px;
-  filter: drop-shadow(20px 20px 20px #0A2547);
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -65%);
-  z-index: -1;
-}
-
-.secondary-buttons{
-    display: flex;
-    background-color: var(--secondary-color);
-    justify-content: space-around;
-    width: fit-content;
-    align-items: center;
-    padding: 1rem 0;
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 120%);
-    border-radius: 10px;
-    gap: 76px;
-    padding: 15px;
-}
-
-.secondary-buttons h3{
-    font-size: 1rem;
-    gap: 5px;
-}
-
-.secondary-buttons img{
-    width: auto;
-    height: 13px;
-}
-
-.footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:  var(--secondary-color);
-  padding: 50px 30px;
-  width: fit-content;
-  border-radius: 10px;
-}
-
-footer{
-  position: absolute;
-  bottom:50%;
-  left: 50%;
-  transform: translate(-50%, 240%);
-}
-
-.footer img {
-  width: 1100px;
-  height: auto;
-  filter: brightness(0.9);
   transition: transform 0.3s;
 }
 
+.get-start:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  margin-top: 0;
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  padding: 30px 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  width: 90%;
+}
+
+.footer img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0.9);
+}
+
 .logo-empresa{
-  width: 60px;
-  height: 30px;
+  width: 40px;
+  height: 20px;
   background-color: var(--button-color);
   border-radius: 200px 0px 200px 0px;
 }
 
 
-@media (max-width: 1024px){
-  .speed-container{
+
+/* -------- Telas Grandes -------- */
+@media (min-width: 1440px) {
+  .main-text {
+    width: 45%;
+    height: 55vh;
+    transform: translate(-50%, -15%);
+  }
+
+  .main-text h1 {
+    font-size: 9vw;
+  }
+
+  .car-image img {
+    width: 55%;
+    top: -10vh;
+  }
+
+  .text-container {
+    margin-top: 360px;
+  }
+}
+
+/* -------- TABLET -------- */
+@media (max-width: 1024px) {
+  .speed-container,
+  #contact-us,
+  .contact-us {
     display: none;
   }
 
-  #contact-us{
-    display: none;
+  .car-image img {
+    width: 80%;
+    top: 17%;
   }
 
-  .car-image img{
-    width: 90%;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -55%);
-
-  }
-
-  .button-container{
-    margin-right: 160px;
-    margin-top: 13px;
-  }
-
-  .main-text{
-    height: 500px;
-    top: 19%;
-  }
-
-  .main-text h1{
-    margin-top:70px;
-  }
-
-  .secondary-buttons h3{
-    width: 70px;
-  }
-
-  .secondary-buttons{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 160%);
-  }
-
-  .a{
-    width: fit-content;
-  }
-
-  .text-container{
+  .text-container {
     justify-content: center;
-    margin-top: 60px;
     text-align: center;
   }
 
-  .footer img{
-    width: 650px;
+  .text {
+    justify-content: center;
+    margin-top:40px;
+  }
+
+  .text p{
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer img {
+    width: 80%;
   }
 
   .footer{
-    margin-top: 30px;
+    margin-top: 50px;
   }
 
-  .contact-us{
-    position: absolute;
-    right:50%;
-    top:50%;
-    transform: translate(190%, -1080%);
+  .secondary-buttons{
+    margin-top: 120px;
+  }
+}
+
+/* -------- MOBILE -------- */
+@media (max-width: 480px) {
+
+  .button-container a{
+    font-size: 12px;
   }
 
-  header{
-    height: 13.5vh;
-    max-height: 20vh;
+  .car-image img {
+    width: 95%;
+    top: 50%;
+  }
+
+  .main-text {
+    max-width: 300px;
+    top: 20%;
+  }
+
+  .main-text h1 {
+    font-size: 70px;
+  }
+
+  .secondary-buttons {
     display: flex;
     flex-direction: column;
-
+    flex-wrap: wrap;
+    gap:13px;
+    margin-top: 50%;
   }
 
-  .logo-empresa{
-    width: 30px;
-    height: 15px;
-    background-color: var(--button-color);
-    border-radius: 200px 0px 200px 0px;
+  .secondary-buttons h3 {
+    font-size: 12px;
   }
 
+  .footer img {
+    width: 100%;
+  }
+
+
+  .text p{
+    text-align: center;
+  }
 }
 
-@media(max-width: 480px){
-
-.speed-container{
-  display: none;
-}
-
-#contact-us{
-  display: none;
-}
-
-.contact-us{
-  display: none;
-}
-
-.car-image img{
-  width: 100%;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -30%);
-
-}
-
-.button-container{
-  margin-right: 0;
-  margin-top: 17px;
-}
-
-.main-text{
-  max-width: 300px;
-  max-height: 400px;
-  top: 27%;
-}
-
-.main-text h1{
-  height: 100px;
-  width: 350px;
-  margin-top:60px;
-  font-size: 70px;
-}
-
-.text-container{
-  margin: 0;
-  gap: 0;
-}
-
-.text p{
-  margin: 10px 0;
-}
-
-.secondary-buttons h3{
-  width: 50px;
-  font-size: 12px;
-}
-
-.secondary-buttons h3 img{
-  width: 10px;
-  height: 10px;
-}
-
-.get-start{
-  font-size: 12px;
-  width: 80px;
-  height: 30px;
-}
-
-.secondary-buttons{
-  width: fit-content;
-  gap: 10px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 210%);
-  
-}
-
-.a{
-  width: fit-content;
-
-}
-
-.text-container{
-  justify-content: center;
-  margin-top: 60px;
-  text-align: center;
-}
-
-.footer img{
-  width: 330px;
-  padding: 0;
-}
-
-.footer{
-  padding: 15px;
-  margin-top: 60px;
-}
-
-
-header{
-  height: 20vh;
-  max-height: 20vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.button-container a{
-  font-size: 12px;
-}
-
-.logo-empresa{
-  width: 30px;
-  height: 15px;
-  background-color: var(--button-color);
-  border-radius: 200px 0px 200px 0px;
-}
-}
