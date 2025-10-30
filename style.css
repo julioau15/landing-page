@@ -280,22 +280,30 @@ footer {
 /* -------- Telas Grandes -------- */
 @media (min-width: 1440px) {
   .main-text {
-    width: 45%;
+    width: 55%;
     height: 55vh;
     transform: translate(-50%, -15%);
+    top: -1%;
   }
 
   .main-text h1 {
     font-size: 9vw;
+    margin-top: 110px;
   }
 
   .car-image img {
     width: 55%;
-    top: -10vh;
+    top: 0%;
   }
 
   .text-container {
-    margin-top: 360px;
+    margin-top: 200px;
+    gap: 900px;
+    width: max-content;
+  }
+
+  .button-container{
+    margin-right: 20px;
   }
 }
 
