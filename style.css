@@ -4,12 +4,18 @@
   --primary-color:#0C0E12;
   --secondary-color:#1a1d2591;
   --button-color:#C2F22E;
+  --dropdown-color:#1a1d25;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul, li{
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -30,7 +36,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .logo {
@@ -53,7 +58,6 @@ header {
 .button-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -159,7 +163,7 @@ h1 {
 }
 
 .speed span {
-  font-weight: 700;
+  font-weight: 700px;
   font-size: 24px;
   color: var(--text-color);
 }
@@ -170,7 +174,7 @@ h1 {
 }
 
 .uninterrupted {
-  font-weight: 700;
+  font-weight: 700px;
   color: var(--text-color);
   letter-spacing: 0.08em;
 }
@@ -208,10 +212,68 @@ h1 {
   justify-content: space-around;
   align-items: center;
   width: fit-content;
+  height: 100px;
   padding: 1rem 2rem;
   border-radius: 10px;
   gap: 76px;
   margin: 30px auto 0 auto;
+}
+
+/* DropDown menu */
+.dropdown-menu{
+  display: flex;
+  gap: 2px;
+}
+
+.dropdown-menu li{
+  width: 150px;
+  height: 30px;
+  position: relative;
+}
+
+.dropdown-menu a{
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  display: block;
+  display: flex;
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  transition: all .2s linear;
+
+}
+
+.dropdown-menu li:hover > a{
+  background-color: var(--secondary-text-color);
+  color: var(--text-color);
+}
+
+.dropdown-menu li:hover > .dropdown-secondary-menu{
+  display: block;
+}
+
+.dropdown-secondary-menu{
+  display: none;
+  margin-top: 1px;
+  position: absolute;
+  z-index: 10;
+}
+
+.dropdown-secondary-menu a{
+  background-color: var(--dropdown-color);
+  width: 150%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+  font-size: .8rem;
+  border-left: 8px solid transparent;
+}
+
+.dropdown-secondary-menu li:hover > a{
+  border-left: 8px solid black;
 }
 
 .secondary-buttons h3 {
@@ -404,12 +466,22 @@ footer {
     font-size: 70px;
   }
 
+  .dropdown-menu{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .dropdown-menu li{
+    width: 80px;
+  }
+
   .secondary-buttons {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     gap:13px;
     margin-top: 50%;
+    height: fit-content;
   }
 
   .secondary-buttons h3 {
